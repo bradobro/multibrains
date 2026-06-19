@@ -2,6 +2,14 @@
 All notable changes to this project will be documented in this file. See [conventional commits](https://www.conventionalcommits.org/) for commit guidelines.
 
 - - -
+## v0.1.1 - 2026-06-19
+#### Bug Fixes
+- cocogitto now updates package.json - (c1298ff) - Brad Olson
+#### Miscellaneous Chores
+- configure bun package - (87a338a) - Brad Olson
+
+- - -
+
 ## v0.1.0 - 2026-06-19
 #### Features
 - initialize ADR (architectural design records) - (399b21e) - Brad Olson
