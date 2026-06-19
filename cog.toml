@@ -16,11 +16,9 @@ tag_prefix = "v"
 
 pre_bump_hooks = [
    "[ \"$(git rev-parse --show-toplevel)\" = \"$PWD\" ] || { echo 'ERROR: cog bump must be run from project root'; exit 1; }",
-  "echo 'export const VERSION = \"{{version}}\";' > version.ts",
-  "echo '{{version}}' > version.txt",
-  "echo 'package main\n\nconst VERSION = \"{{version}}\"\n' > version.go",
-  "git add ./version.ts version.txt version.go",
-  "git commit -m 'chore: update version files'",
+  "jq '.version = \"{{version}}\"' package.json > package.json.tmp && mv package.json.tmp package.json",
+  "git add ./package.json",
+  "git commit -m 'chore: update package.json version'",
 ]
 
 [git_hooks.commit-msg]
