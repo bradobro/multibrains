@@ -1,0 +1,11 @@
+{
+  "name": "multibrains",
+  "private": true,
+  "devDependencies": {
+    "@socketsecurity/bun-security-scanner": "^1.1.2",
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  }
+}
